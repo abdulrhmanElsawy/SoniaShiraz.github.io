@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700");
+* {
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #EAE7DC;
+    margin: 0;
+    background-size: cover;
+}
+
+body .container {
+    overflow: hidden;
+}
+
+nav {
+    --duration: .5s;
+    --easing: ease-in-out;
+    position: relative;
+    width: 220px;
+    margin: 20px;
+    float: right;
+    left: 0;
+    transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+}
+
+nav.closed {
+    left: 17%;
+    transition: 3s;
+    -webkit-transition: 3s;
+    -moz-transition: 3s;
+    -ms-transition: 3s;
+    -o-transition: 3s;
+}
+
+@media(max-width:550px) {
+    nav.closed {
+        left: 40%;
+        transition: 3s;
+        -webkit-transition: 3s;
+        -moz-transition: 3s;
+        -ms-transition: 3s;
+        -o-transition: 3s;
+    }
+}
+
+nav ol {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin: -4px 0 0 0;
+}
+
+nav a {
+    display: block;
+    text-decoration: none;
+    background: #111;
+    transform-origin: 0 0;
+    transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+    transition-delay: var(--delay-out);
+    border-radius: 4px;
+    padding: 1em 1.52em;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background: #111;
+    text-decoration: none;
+}
+
+nav .sub-menu a {
+    font-size: .9em;
+    color: #666666;
+    border-left: 2em solid white;
+    padding: .75em;
+    background: linear-gradient(to right, #dddddd 2px, #ffffff 2px);
+    text-decoration: none;
+}
+
+nav .sub-menu.closed a {
+    background: none;
+    background-color: #111;
+    border-left: 2em solid #111;
+}
+
+nav .sub-menu a:hover {
+    background-color: #111;
+}
+
+nav header {
+    font-weight: 600;
+    display: block;
+    background: rgba(255, 255, 255, 0.5);
+    transform-origin: 0 0;
+    transition: transform var(--duration) var(--easing), color var(--duration) var(--easing);
+    transition-delay: var(--delay-out);
+    border-radius: 4px;
+    padding: 1em 1.52em;
+}
+
+nav header span {
+    border: none;
+    background: transparent;
+    font-size: 1.5em;
+    padding: 0;
+    cursor: pointer;
+    line-height: 1;
+    float: right;
+}
+
+nav footer button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    padding: calc(1em - 2px);
+    width: 100%;
+    transform-origin: 0 0;
+    transition: transform var(--duration) var(--easing);
+    transition-delay: calc(var(--duration) + (.1s * (var(--count) / 2)));
+    cursor: pointer;
+    outline: none;
+    background: #cdcdcd;
+    opacity: 0;
+}
+
+nav.closed a,
+nav.closed header {
+    transform: translateY(calc(var(--top) * -1)) scaleY(0.1) scaleX(0.2);
+    transition-delay: var(--delay-in);
+    color: transparent;
+}
+
+nav.closed footer button {
+    transition-delay: 0s;
+    transform: scaleY(0.7) scaleX(0.2);
+}
+
+.logo {
+    float: left;
+}
+
+.logo h1 {
+    font-family: 'Corinthia', cursive;
+    user-select: none;
+}
+
+.nav-bar-section {
+    position: absolute;
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+}
+
+
+/* End Nav Bar Section Styling */
+
+
+/* Start Landing Section Styling */
+
+.intro {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1rem;
+}
+
+.intro-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    /* relative to nearest positioned ancestor and not nearest block-level ancestor - alternatively: width: 100vw; */
+    height: 100%;
+    /* relative to nearest positioned ancestor and not nearest block-level ancestor - alternatively: height: 100vh; */
+    object-fit: cover;
+    z-index: -1;
+    /* filter: brightness(50%); */
+    /* 0% black, 100% original image, values > 100% are allowed for brighter than original image. */
+    /* display: none; */
+    opacity: 0;
+    transition: opacity 0.75s ease-in-out;
+}
+
+
+/* .intro-slideshow img:first-child {
+    display: block;
+    opacity: 1;
+  } */
+
+.intro .intro-header {
+    border-radius: 0.5rem;
+    padding: 2rem 2.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.intro h1 {
+    font-size: 4rem;
+    margin-bottom: 0.75rem;
+    color: #fff;
+}
+
+.intro p {
+    font-size: 1.75rem;
+    color: #fff;
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 12px;
+    }
+    .intro-header {
+        padding: 1.5rem 2rem;
+    }
+    .intro h1 {
+        font-size: 2.5rem;
+    }
+    .intro p {
+        font-size: 1.25rem;
+    }
+}
+
+
+/* End Landing Section Styling */
