@@ -13,7 +13,7 @@ $els.each(function(j) {
     i++;
 });
 
-$('.menu footer button').on('click', function(e) {
+$('.menu').on('click', function(e) {
     e.preventDefault();
     $els.each(function(j) {
         $(this).css('--top', $(this)[0].getBoundingClientRect().top + ($(this).attr('data-group') * -15) - 20);
@@ -26,12 +26,9 @@ $('.menu footer button').on('click', function(e) {
 });
 
 // run animation once at beginning for demo
-setTimeout(function() {
-    $('.menu footer button').click();
-    setTimeout(function() {
-        $('.menu footer button').click();
-    }, (count * 100) + 500);
-}, 1000);
+
+$('.menu footer button').click();
+
 
 
 const slideshowImages = document.querySelectorAll(".intro-slideshow img");
@@ -53,3 +50,32 @@ function nextImage() {
     // slideshowImages[currentImageCounter].style.display = "block";
     slideshowImages[currentImageCounter].style.opacity = 1;
 }
+
+
+// Owlcarousel
+$(document).ready(function() {
+    $(".owl-carousel").owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        autoplay: true,
+        autoplayTimeout: 3000,
+        autoplayHoverPause: true,
+        center: true,
+        navText: [
+            "<i class='fa fa-angle-left'></i>",
+            "<i class='fa fa-angle-right'></i>"
+        ],
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 1
+            },
+            1000: {
+                items: 3
+            }
+        }
+    });
+});
