@@ -600,6 +600,7 @@
         outline: none;
         height: 33px;
         border-bottom: 1px solid #545454;
+        color: #fff;
     }
     
     .footer button {
@@ -614,3 +615,127 @@
         height: 29px;
     }
     /* End Footer Sectoin */
+    /* Start Free Programs Videos Section Style */
+    
+    .programs-container {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 15px;
+        align-items: flex-start;
+        padding: 5px 5%;
+    }
+    
+    .programs-container .main-video {
+        background: #fff;
+        border-radius: 5px;
+        padding: 10px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    
+    .programs-container .main-video video {
+        width: 100%;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    
+    .programs-container .main-video .title {
+        color: #333;
+        font-size: 23px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    
+    .programs-container .video-list {
+        background: #fff;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        height: 520px;
+        overflow-y: scroll;
+    }
+    
+    .programs-container .video-list::-webkit-scrollbar {
+        width: 7px;
+    }
+    
+    .programs-container .video-list::-webkit-scrollbar-track {
+        background: #ccc;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    
+    .programs-container .video-list::-webkit-scrollbar-thumb {
+        background: #666;
+        border-radius: 50px;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        -ms-border-radius: 50px;
+        -o-border-radius: 50px;
+    }
+    
+    .programs-container .video-list .vid video {
+        width: 100px;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    
+    .programs-container .video-list .vid {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        background: #f7f7f7;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid rgba(0, 0, 0, .1);
+        cursor: pointer;
+    }
+    
+    .programs-container .video-list .vid:hover {
+        background: #eee;
+    }
+    
+    .programs-container .video-list .vid.active {
+        background: #2980b9;
+    }
+    
+    .programs-container .video-list .vid.active .title {
+        color: #fff;
+    }
+    
+    .programs-container .video-list .vid.active .title {
+        color: #333;
+        font-size: 17px;
+    }
+    
+    @media(max-width:991px) {
+        .programs-container {
+            grid-template-columns: 1.5fr 1fr;
+            padding: 10px;
+        }
+    }
+    
+    @media(max-width:768px) {
+        .programs-container {
+            grid-template-columns: 1fr;
+        }
+    }
+    /* End Free Programs Videos Section Style */
